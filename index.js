@@ -17,6 +17,10 @@ async function suchBilder(){
 
     const results = data.results;
 
+    if(seite === 1){
+        suchErgebnisse.innerHTML = "";
+    }
+
     results.map(function(result){  // Für jedes ergebnis aus der suche wird ein array erstellt
         const bild = document.createElement("img");  // das ergebnis ist ein erstelltes img
         bild.src = result.urls.small;  // das ist der weg um small bilder zu bekommen aus unsplash
